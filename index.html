@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis Tareas Académicas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Mis Tareas Académicas</h1>
+
+  <section id="materias">
+    <h2>Materias y Créditos</h2>
+    <input type="text" id="nuevaMateria" placeholder="Nombre de la materia" />
+    <input type="number" id="creditosMateria" placeholder="Créditos" min="1" />
+    <button onclick="agregarMateria()">Agregar/Actualizar Materia</button>
+    <ul id="listaMaterias"></ul>
+  </section>
+
+  <section id="nueva-tarea">
+    <h2>Agregar Tarea</h2>
+    <input type="text" id="nombreTarea" placeholder="Nombre de la tarea" />
+    <select id="materia">
+      <option value="">Selecciona una materia</option>
+    </select>
+    <input type="date" id="fechaLimite" />
+    <input type="number" id="nota" placeholder="Nota (opcional)" />
+    <button onclick="agregarTarea()">Agregar</button>
+  </section>
+
+  <section id="filtros">
+    <input type="text" id="buscar" placeholder="Buscar tarea por nombre" oninput="filtrarTareas()" />
+    <input type="date" id="filtrarFecha" onchange="filtrarTareas()" />
+  </section>
+
+  <section id="promedios">
+    <h2>Promedio de notas por materia</h2>
+    <ul id="listaPromedios"></ul>
+    <h3>Promedio General Ponderado: <span id="promedioGeneral">-</span></h3>
+  </section>
+
+  <section id="pendientes">
+    <h2>Tareas Pendientes</h2>
+    <ul id="listaPendientes"></ul>
+  </section>
+
+  <section id="realizadas">
+    <h2>Tareas Realizadas</h2>
+    <ul id="listaRealizadas"></ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
